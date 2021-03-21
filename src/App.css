@@ -98,11 +98,17 @@
 .Seller-Content {
   clear: both;
   float: left;
+  width: 100%;
 }
 
 .Buyer-Content {
   clear: both;
   float: right;
+}
+
+.Message-Content {
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 .Seller-Content .MessageContainer,
