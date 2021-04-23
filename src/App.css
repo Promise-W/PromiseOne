@@ -74,7 +74,7 @@
   border-bottom: 1px solid #e1e1e1;
 }
 
-/* .Beautify-Scroll-Bar::-webkit-scrollbar
+.Beautify-Scroll-Bar::-webkit-scrollbar
 {
     width: 4px;
     height: 4px;
@@ -83,7 +83,12 @@
 .Beautify-Scroll-Bar::-webkit-scrollbar-track
 {
     border-radius: 4px;
-} */
+}
+
+.Beautify-Scroll-Bar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #c1c1c1;
+}
 
 .MessageList {
   display   : block;
@@ -125,6 +130,10 @@
 .Buyer-Content .MessageContainer {
   background-color: #A2E563;
   float           : right;
+}
+
+.MessageBottom {
+  display: none;
 }
 
 .MessageBottom .ChatInput-Content textarea {
