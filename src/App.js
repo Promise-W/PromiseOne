@@ -70,18 +70,7 @@ class App extends React.PureComponent {
       messageItems: [
         {
           role: 'seller',
-          content: 'Hi, Wellcome to use this, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista\n' +
-            '              probare, quae sunt a te dicta? Refert tamen, quo modo.'
-        },
-        {
-          role: 'buyer',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista\n' +
-            'probare, quae sunt a te dicta? Refert tamen, quo modo.'
-        },
-        {
-          role: 'buyer',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista\n' +
-            'probare, quae sunt a te dicta? Refert tamen, quo modo.'
+          content: '你好，请按照提示来操作'
         },
         {
           role: 'seller',
@@ -101,11 +90,11 @@ class App extends React.PureComponent {
   }
 
   handleRejectTest = () => {
-
+    alert('礼物免费哦，请再考虑~');
   }
 
   handleConfirmOrderNum = (orderNumber) => {
-    if (orderNumber === 'success') {
+    if (orderNumber === '123456') {
       this.setState({
         messageItems: [...this.state.messageItems, {
           role: 'seller',
@@ -131,6 +120,11 @@ class App extends React.PureComponent {
     })
   }
 
+  componentDidMount() {
+    // debugger;
+    document.getElementsByClassName('Seller-Content')[document.getElementsByClassName('Seller-Content').length - 1].scrollIntoView();
+  }
+
   render() {
     const { messageItems } = this.state;
 
@@ -139,8 +133,7 @@ class App extends React.PureComponent {
         <div className="Message-Container">
           <div className="MessageSubject-Content">
             <div className={'Message-Content'}>
-              Hi, Wellcome to use this, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
-              probare, quae sunt a te dicta? Refert tamen, quo modo.
+              Hi, Wellcome to use promiseOne Project.
             </div>
           </div>
           <Divider plain>Chatting</Divider>
